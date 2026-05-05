@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Market">
 <meta name="theme-color" content="#fff0f5">
 <title>Market — Shopping Lists</title>
@@ -37,7 +37,8 @@
     height: 100%;
     min-height: 100vh;
     min-height: 100dvh;
-    background: linear-gradient(160deg, #fff0f5 0%, #ffe8f0 40%, #ffd6e8 100%);
+    background-color: #fff0f5;
+    background-image: linear-gradient(160deg, #fff0f5 0%, #ffe8f0 40%, #ffd6e8 100%);
     background-attachment: fixed;
     font-family: -apple-system, 'Helvetica Neue', sans-serif;
     color: var(--text-primary);
@@ -45,7 +46,7 @@
     overscroll-behavior: none;
   }
   body {
-    /* Fill behind notch/status bar with the same gradient */
+    /* Keep controls clear of iOS chrome while the background fills behind it. */
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
