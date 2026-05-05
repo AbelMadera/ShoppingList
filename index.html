@@ -37,18 +37,17 @@
     height: 100%;
     min-height: 100vh;
     min-height: 100dvh;
-    background: #ffd6e8;
+    background: #ffe1ed;
     font-family: -apple-system, 'Helvetica Neue', sans-serif;
     color: var(--text-primary);
     overflow: hidden;
     overscroll-behavior: none;
   }
   body {
-    /* Keep controls clear of iOS chrome while the background fills behind it. */
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    min-height: 100%;
   }
   body::before {
     content: '';
@@ -74,8 +73,12 @@
   }
 
   #app {
-    position: relative; z-index: 1; height: 100%;
+    position: relative; z-index: 1; height: 100%; min-height: 100dvh;
     max-width: 430px; margin: 0 auto;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
     display: flex; flex-direction: column; overflow: hidden;
   }
 
